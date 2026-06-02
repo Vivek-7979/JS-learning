@@ -41,3 +41,27 @@ let convertedtostring= String(anynumber) // the 69 number becomes a string . alt
 
 console.log( convertedtostring)
 console.log ( typeof convertedtostring); // This is altough seeing a number but it is a string now 
+
+
+
+// **********************  OPERATIONS ************************
+
+
+let value = 33
+let negvalue=-value;
+console.log(negvalue) // here simply the arithmetic operations are performed 
+
+// Arithmetic operations :
+// console.log(2+2)
+// console.log(2*2)
+// console.log(2-2)
+// console.log(2**3)
+// console.log(4/2)
+// console.log(3%2)  It tells about the remainder
+
+
+let str1= "vivek"
+let str2=" sharma"
+let str3= str1+str2; // simply aadding the strings 
+console.log(str3)  
+
