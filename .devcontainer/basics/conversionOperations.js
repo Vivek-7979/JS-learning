@@ -65,3 +65,9 @@ let str2=" sharma"
 let str3= str1+str2; // simply aadding the strings 
 console.log(str3)  
 
+
+let a = 3
+// let b = a++  a=4 ; b= 3
+let c = ++a // a = 4 ; c= 4
+console.table([a,c])
+
