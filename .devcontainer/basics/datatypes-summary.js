@@ -15,7 +15,7 @@
      to check = console.log( Id === anotherId );  // It will be false 
      
 
-2.] Non - Primitive : Called by Reference  (exact memory location is passed)
+2.] Non - Primitive : Called by Reference  (exact memory location/address is passed)
 
     ( Types ) : Arrays , objects , Functions
 
@@ -26,7 +26,6 @@ let object = {
 name:"vivek"
 age :"20"
 }
-
 
 
 
@@ -75,3 +74,43 @@ console.log("hi vivek")
     console.log(typeof loggedIn)//boolean
     console.log(typeof myBigInt)//bigint
     console.log(typeof myNull)// Object ( special case )
+
+
+
+
+
+
+
+    // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
+
+
+// Types of Memory : 1.] Stack (Used in Primitive data types ) 
+//                   2.] Heap (Used in Non-Primitive data types)
+
+
+// Example : As non-primitive data type uses heap (like-objects) and primitive uses stack (like-strings)
+
+           let myname = "vivek"    // original value 
+
+           let namechanged= myname 
+           namechanged="not vivek " // changed the value as this is the copied value
+
+           console.log(myname);       //original value
+           console.log(namechanged);  // only the copied value chnaged not the original value
+
+
+let user1 ={                     // user is a variable name stored in stack . But it points towards the heap memory where the object's data is stored .
+    
+ email:"user@google.com", 
+upi:"123@sbi",
+
+}
+
+let user2 = user1    // user2 has same value as user1 . As the user2 variable poinst towards user1 variable and user1 variable points towards the heap memory location .
+
+user2.email="Vivek@google.com"  // value in user 2 changed . it means that the original value in heap (user1) is also changed.
+
+console.log(user1.email)  // original updated value : as this is pass by reference so original value is also chnaged
+console.log(user2.email)  // value changed 
+
+
