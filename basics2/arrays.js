@@ -59,10 +59,10 @@ console.log(fruits); // Original array is not modified.
 
 // splice() : This method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. i.e. Splicing an array to remove, replace or add items.
 fruits.splice(1,2); // This will remove 1 item from index 2 (which is "orange") and 1 item from index 1 (which is "banana") and return the removed items in a new array.
-console.log(fruits); // Original array is modified.
+console.log(fruits); // Original array is modified.{items bahar hi a gyie puri jo splice kiti c}
 
 // fruits.splice(1, 0, "new item added"); // This will add a new item at index 1 without removing any item.
-// console.log(fruits); // Original array is modified.{items bahar hi a gyie puri jo splice kiti c}
+// console.log(fruits); // Original array is modified.
 
 // fruits.splice(3, 1, "replaced item"); // This will replace 1 item at index 3 with "replaced item".
 // console.log(fruits); // Original array is modified.
