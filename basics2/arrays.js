@@ -62,7 +62,7 @@ fruits.splice(1,2); // This will remove 1 item from index 2 (which is "orange") 
 console.log(fruits); // Original array is modified.
 
 // fruits.splice(1, 0, "new item added"); // This will add a new item at index 1 without removing any item.
-// console.log(fruits); // Original array is modified.
+// console.log(fruits); // Original array is modified.{items bahar hi a gyie puri jo splice kiti c}
 
 // fruits.splice(3, 1, "replaced item"); // This will replace 1 item at index 3 with "replaced item".
 // console.log(fruits); // Original array is modified.
