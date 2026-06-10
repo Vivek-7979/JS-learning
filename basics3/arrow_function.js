@@ -50,3 +50,9 @@ const variable = () => ( { object : " value of object " } )       /* here we don
 
 
 
+
+
+
+
+// USE "${this.username}"  when we want to access the object (it's properties)  inside the object method .
+// and use "${username}"  when we have normal variables , if-else , f(x) .... (i.e.   It is inside the that scope )

@@ -87,3 +87,11 @@ And it looks like :  f(2) -> f(1) -> f(0)
 
 
 */
+
+/*                                                          VERY IMPORTANT
+
+
+Note : 1.]  The js executes statements in order , but it doesnot care about empty lines .
+       2.]  js executes the code from top to bottom 
+       3.] Js dont execute line by line but It executes " STATEMENT BY STATEMENT "
+       4.] What matters are statements , blocks {} , functions and asynchronous operations .                                       */
