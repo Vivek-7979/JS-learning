@@ -44,7 +44,8 @@ else{
 
 /*
 && = dohve statement true honi chaidi tah hi chalna
-|| = dohva vicho ik true howe tah bhi chal pena                       */
+|| = dohva vicho ik true howe tah bhi chal pena  
+                     */
 
 const isuserLoggedin = true 
 const debitCard = true
@@ -61,4 +62,33 @@ if(loginfromEmail || loginfromGoogle  || loginfromNumber){
 if(isuserLoggedin && debitCard && 2===2){
     console.log("User can buy an item ")
 }
+
+
+/* 
+                          SOME OTHER OPERATORS 
+
+
+Note : 1.] Nullish Coalescing Operatot ( ?? ) : for null / undefined
+
+example :                                                                                     */
+
+              let val1;
+              val1= 5 ?? 10                    // ans : 5
+              val1= null ?? 10                 // ans : 10
+              val1= undefined ?? 15            // ans : 15
+              val1 = null ?? 10 ?? 500         // ans : 10
+              val1 = null ?? undefined         // ans : undefined
+
+console.log(val1)
+
+
+/* 2.] terneray operator ( ? ) : question then ans true = first condition worked and false = second condition .
+
+        condition ? true : false 
+
+Example : const Price = 100
+          Price <=80 ? console.log("Price is less than 80") : console.log("Price is more than 80 ")                */
+
+
+
 
