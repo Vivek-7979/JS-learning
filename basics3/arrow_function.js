@@ -1,3 +1,10 @@
+
+
+/* WE USE ARROW F(X) BECAUSE :1.]  It is shorter , cleaner and concise way of writing a f(x).
+                              2.]  They make .map(),.filter() and other methods more concise .
+
+
+
 // to understand the arrow function we have to inderstand the :-
 // 1.] Context : it is the whole data/value in the scope/code.    [ kis baare mein]
 // 2.] this : It refers to the current context
