@@ -21,7 +21,7 @@ dataBase.forEach((values) => { console.log(` Last Name is :- ${values.lastName}`
 
 // Simply : for each doesnot return any values ; so we cant use it if we want to do some operations{it can be done but with if statement}
 
-//   for this return we use = "    filter ()   "   . filter = filter karke dena data database vicho simply .....
+//   for this return we use = "    filter ()   "   . filter = condition check karke dena data database vicho simply .....
 
 
 const Numbers = [  1, 2 ,3 ,4 ,5 , 6 , 7 , 8 ,9 ,10] 
