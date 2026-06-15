@@ -1,6 +1,31 @@
-/* DOM = DOcument Object Model 
+<!--  DOM = DOcument Object Model            { tree-like structure of the webpage }
 Document = the whole webpage 
-object = each HTML element is represented as a object 
+object = each HTML element is represented as a object(node) 
+model = the structured tree representation of the page 
+
+as , when a browser loads a webpage , it travels through the html and creates the DOM tree in the memory.
+                                         +
+JS can interact with this tree to change the page without reloading (manipulate)                                         
+
+=> Here ; DOM is nothing just simply the representation of the webpage as a tree-structure . like :
+
+                                     Window
+                                       |
+                                    Document 
+                                       |
+                                      HTML 
+                                       |
+                                ----------------
+                            Head                Body   
+                             |                   |
+                         --------               Div -attribute ( dom-class )
+                        meta    title            |
+                         |         |          ------------
+                     attribute    text       h1          p
+                                              |          |
+                                           text node    text       -->
+
+
 
 
 
@@ -10,11 +35,29 @@ object = each HTML element is represented as a object
     <meta charset="UTF-8">
  
     <title> DOM</title>
-</head>
-<body>
 
-    <div class = dom-class>
-    <h1>Hello, World!</h1>
-    <p>This is my very first HTML webpage.</p></div>
+
+<style>
+
+.bodie{ background-color: #212121;
+    color:#fff;
+     }
+
+</style>
+
+</head>
+<body class="bodie">
+
+    <div   class = "dom-class">
+    <h1 id = "title">DOM </h1>
+    <p>To manipulate the do first of all we have to slelect the html elment (or dom object) .
+        Then we can perform the manipulation on dom . 
+        simply " je kisi chiz nu change karna teh pehla select bhi karna pena " <br>
+            <br> To select : getElementById("write the id of the element")      <br>  & in console of wepage in inspect = document.getElementById('title') <br><br>
+            To set value of Id : getElementByID('title').setAttribute('class', 'test class')  //  classname of selected Id is changed to test class <br>
+            <br> console inside inspect = is for JS <br> 
+            <br> we can also select by className , tag name etc . But , the Id one is most common . 
+</p>
+</div>
 </body>
 </html>
