@@ -50,14 +50,74 @@ JS can interact with this tree to change the page without reloading (manipulate)
 
     <div   class = "dom-class">
     <h1 id = "title">DOM </h1>
+
+
+    <h3> For selection/to target  the html elemsnt we use :querySelector or selectElementByID  </h3>
     <p>To manipulate the do first of all we have to slelect the html elment (or dom object) .
         Then we can perform the manipulation on dom . 
-        simply " je kisi chiz nu change karna teh pehla select bhi karna pena " <br>
-            <br> To select : getElementById("write the id of the element")      <br>  & in console of wepage in inspect = document.getElementById('title') <br><br>
-            To set value of Id : getElementByID('title').setAttribute('class', 'test class')  //  classname of selected Id is changed to test class <br>
+        <br><br>
+       
+
+
+        simply " je kisi chiz nu change karna teh pehla select bhi karna pena " <br> <br>
+
+
+
+ 1.] qureySelector : This is widely used and it has lot of applications . like : <br>
+          document.querySelector('h1') = It selects the first h1 from the whole webpage <br>
+          document.queryselector(#nameofid) = It selects the element of html by id name <br>
+          document.querySelector('.className') = It selects the class with this name <br>
+          document.querySelector('input[type = "password" ]') = It selects the attribute of the the input field of paassword type. <br>
+          or img , p , p : first-child , ul , etc . <br> <br>
+
+          2.] querySelectorAll = It selects the all similar type of elemsts in the document . unlike- querySelector which only selects the first item .
+Like : 1.]  documment.querySelectorAll ('h1')  : It selects the all h1 tags in the webpage . <br>
+But ; <br> 
+           When we select the all items by querySelectorAll it returns the NodeList not array( altough it looks - like array )  . So , to access this we have slight differrent approach .(somewhere it also have similar properties with array )
+           <br> In NodeList =>  foreach()  ; method which was in arrays works well . <br>
+           Example: const templist = queryselector('h1')
+                    templist.foreach( (listItem) => {
+                        listitem.style.backgroundcolor = 'red'
+                    }) <br>
+                    NOTE => If we want the array functionality(like-filter(),map() etc.) on the all items that is selected by querySelectorAll . Then , first we have to convert the NodeList --to-- > Array
+
+
+            <br>3.]   getElementById("write the id of the element")      <br>  & in console of wepage in inspect = document.getElementById('title') <br><br>
+ 
+4.] document.getElementByClassName('name of the class to be seleccted') :  It selects all the classes with the same name that is entered
+<br> NOTE : But ; It returns the HTMLCollection { not array , not NodeList - like in method querySelectorAll} <br>
+     And it doesnot have forEach() method in it . like - was in Nodelist where we can access the all items of the list in a loop <br>
+     Therefore :--- We have to convert this HTMLCollection ----into-- > array (data structure) . <br><br>
+
+     To convert => Array.from('temporaryList')   <br>
+    { name of the variable in which the class is stored .ex = const tmeporayList = document.getElementsByClassName{'nameofClass'}}
+
+
+            5.] To set value of Id : getElementByID('title').setAttribute('class', 'test class')  //  classname of selected Id is changed to test class <br>
+
             <br> console inside inspect = is for JS <br> 
-            <br> we can also select by className , tag name etc . But , the Id one is most common . 
+
+            <br> we can also select by className , tag name etc .like: selectElementByClassName But , the Id one is most common . 
 </p>
+
+<h3>Propeties : belongs to HTML elements after we have selected them .(they changes the selected html element )</h3>
+<p> 1.] .innertext <br>
+      It just shows the visible text . (only visible content ) <br><br>
+      2.] .textContent <br>
+      It shows the whole text content even if it is hidden .(large content) <br><br>
+      3.] .innerHTML <br>
+      All the HTMl code of the element (largest content) <br>
+      <br>
+      4.] .style <br>
+      It is also a property(then sub-property) of the element That is changed(manupulated) . Like : .style.backgroundcolor , .style.padding , .style.margintop , or all types of styling .....
+
+</p>
+
+
+<h1>Here , we are doing all these things in the console of the webpage {inside inspect} . So , when we refresh everything disappears/resets</h1>
+<h2>But , eventually we will code all this inside the hardcoded file and these changes will reflect permanently inside the webpage { i.e. DOM manipulated }</h2>
+<h1> Real life Application : updating the values coming from the database , etc . </h1>
+
 </div>
 </body>
 </html>

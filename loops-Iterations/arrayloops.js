@@ -79,3 +79,7 @@ console.log(values)
 arrayName.forEach(ItprintValues)       // Giving reference of the f(x)
 
 /*                         ALL THERE METHODS DOES THE SAME TASK , JUST THE DIFF LIES IN HOW THEY ARE WROTE                      */
+
+
+
+//   .map(), .filter() , .foreach() etc are all in-built method(inside prototype) the array data-structure .
