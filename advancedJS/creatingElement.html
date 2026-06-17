@@ -1,0 +1,42 @@
+<!-- Now we will create the elements in the js  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Elements in DOM</title>
+</head>
+<body style="background-color: #212121;color:#f1f1f1">
+    
+</body>
+
+<script>
+// All Js goes here 
+
+// syntax = document.createElement('h1/h2/div/span etc anything')
+
+const newDiv = document.createElement('div')        // creating a div element and storing it in variable
+console.log(newDiv)                                // console krke hi dikhna element
+newDiv.className="nameofDiv"                       // Giving the class name to the div 
+newDiv.id="123";                                    // Giving the id to the div { we can also give it by using setAttribute()}
+
+  // Given all styling to the div
+newDiv.style.backgroundColor ="green"           
+newDiv.style.margin='50px'
+newDiv.style.height='250px'
+newDiv.style.width='250px'
+newDiv.innerText='yeah bro ; wassup !'
+
+
+
+/*  TO ADD THIS DIV IN THE WEBPAGE WHERE WE CAN SEE IT : WE WRITE    appendchild()              */
+
+document.body.appendChild(newDiv)             // adding the div in the body . so , it is visible in the webpage 
+
+
+</script>
+
+
+
+</html>

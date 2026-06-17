@@ -1,0 +1,53 @@
+ <!-- properties in DOM and manupulating in dom -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Properties</title>
+</head>
+<body style="background-color: #212121;color: #f1f1f1;">
+    <div class="parent">
+        <div class="child">Monday</div>
+        <div class="child">Tuesday</div>
+        <div class="child">Wednesday</div>
+        <div class="child">Firday</div>
+    </div>
+
+</body>
+
+
+<script>
+// JS is writeen here 
+
+const storingParent =document.querySelector('.parent')  // selecting the parent div by query selector and storing it inside the variable
+console.log(storingParent);                             // inside console of our webpage 
+console.log(storingParent.children) ;                   // HTMLCollection of all children tha are inside the parent div is what we got . 
+
+// Performing the manipulation of the html element
+
+for (let i = 0; i < storingParent.children.length; i++) {    // applying for loop on the htmlcollection to get all the items
+     console.log(storingParent.children[i].innerHTML);
+    
+}
+
+storingParent.children[1].style.color="green";            // text color of 2nd item is set to green
+console.log(storingParent.firstElementChild)              // Property in which we can get the first child of the parent
+console.log(storingParent.lastElementChild)               // property by which we can find the last child element of the parent
+
+/*            We can also find thr parent from the child              */
+const firstDay = document.querySelector('.child')         // the first child of the child class is selected
+console.log(firstDay);
+console.log(firstDay.parentElement);                     // property to find the parent of this element
+console.log(firstDay.nextElementSibling);                // to find the next sibling element   
+
+console.log("NODES : " , storingParent.childNodes)      // It tells us about the all childnodes of the parent {  BTW ; IT IS A VERY-VERYYY.... COMPLEX STRUCTURE(THE DOM)}
+// where ; even if the enter counts as a childnode !
+
+
+
+</script>
+
+
+</html>
