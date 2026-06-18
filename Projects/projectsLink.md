@@ -41,4 +41,59 @@ btn.addEventListener('click', function(e){ // on click pr
 
 
 
+
+```
+
+## Project 2 ( calculating bmi)
+
+## Solution of Project 1
+
+``` javascript 
+
+const form = document.querySelector('form'); // selecting the whole form 
+
+
+
+form.addEventListener('submit',function(event){ // submit pr eventlistner chalna
+
+  
+  event.preventDefault();  // stops sending the data to the server side 
+
+  const height = parseInt(document.querySelector('#height').value);//selecting & storing height
+  const weight = parseInt(document.querySelector('#weight').value);// selecting and storign weight 
+  const result = document.querySelector('#results'); // selecting the result div
+
+  if ( height === '' || height < 0 || isNaN(height)){ // cheecking input condition of height
+   result.innerHTML = ` Please enter a valid height ${height}`;
+  }
+  else if ( weight === '' || weight < 0 || isNaN(weight)){// check weight input conditions
+    result.innerHTML = ` Please enter a valid weight ${weight}`;
+   }
+   else{
+     const bmi = (weight / ((height * height) / 10000)).toFixed(2) // finally calculating bmi
+
+     // displaying the bmi only
+    // result.innerHTML =`<span>${bmi}</span>`;
+
+    
+// diplaying the bmi and as well as based on that bmi telling that is person is - underweight , normal range or overweight  
+if(bmi<= 18.6){
+  result.innerHTML=`<span> ${bmi} ( Underweight )</span>`;
+}
+if(18.6 <bmi<= 24.9){
+  result.innerHTML=`<span>${bmi} ( Normal Weight ) </span>`;
+}
+if(bmi > 24.9){
+  result.innerHTML=`<span>${bmi} ; ( overweight ) </span>`;
+}
+
+
+   }
+
+});
+
+
+
+
+
 ```
