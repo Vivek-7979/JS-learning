@@ -115,3 +115,20 @@ selectedClock.innerHTML = date.toLocaleTimeString(); // the selectedclock that i
 
 
 ```
+
+## Project 4
+
+``` javascript 
+
+const randomNumber = (parseInt(Math.random() * 100 + 1)) // It will give a random number between 1 to 100
+
+// console.log(randomNumber) // It will print that number in console
+
+
+// selecting all the elements that we need to solve this issue
+const submit = document.querySelector('#subt');
+const userInput  = document.querySelector('#guessField');
+const guesses = document.querySelector('.guesses')
+const lastResult = document.querySelector('.lastResult')
+
+```
