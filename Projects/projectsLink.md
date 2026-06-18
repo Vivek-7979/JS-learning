@@ -97,3 +97,21 @@ if(bmi > 24.9){
 
 
 ```
+
+
+
+## Project 3 
+
+``` javascript 
+const selectedClock = document.querySelector('div'); // selecting the div in which the time will be displayed
+
+
+setInterval(function(){
+let date = new Date(); 
+
+selectedClock.innerHTML = date.toLocaleTimeString(); // the selectedclock that is a div ; a variable named date gives us the localtimestring
+
+},1000);
+
+
+```
