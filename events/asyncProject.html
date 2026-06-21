@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Project</title>
+</head>
+<body>
+    
+    <h1> Async Code</h1>
+    <button id='stop'> Stop </button>
+</body>
+
+<script>
+ //   settimeout() , setinterval(), clearinterval() etc  are not the part of the core js .  They are included in the browser which is provided us through the API {of the web / browser} .
+
+// Syntax of the setTimeout ( handler(means f(x) without name) , time )       ;  time is in milisecond { 1second = 1000 milisecond }
+
+setTimeout(function(){                                  
+    console.log('this is printed after 5 seconds')    // it does the work for one time only after the specific interval of time 
+}, 5000 )
+
+
+</script>
+</html>

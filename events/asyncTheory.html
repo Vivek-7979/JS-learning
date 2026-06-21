@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Code </title>
+</head>
+<body>
+    
+ 
+     <div>
+
+    <ul>
+        <li> <h1> Js (by default) is : - Synchronous + Single threaded(ik thread pr bari-bari sara kuch execute hona) </h1></li>
+        <li> <h1>Js execution :- It executes one line of code at a time ( line-by-line) execution honi...{pehla ik opeartion hona fir agla execute hona}</h1></li>
+        <li> <h2>Blocking code => block the flow of the program (reading file sync : jado read karya karda file cournel  - jado tk hor kuch nhi kar sakda sada program oh block ho jana code saraaa )</h2>      </li>
+        <li><h2>
+            Non-Blocking Code => Doesnot block execution of code (Read file async : jado asynchoronously read kita ; taah program execute kari jana as it is , jado nu cournel neh read krni file and jado read ho jani fer ohne das dena ..)
+        </h2></li>
+    </ul>
+
+     </div>
+
+     <div style="background-color: #212121; color:aliceblue">
+
+        <h1> JS Engine = memeory heap + Call Stack</h1>
+        <h3>We use webAPI/Node : that gives us dom(in webapi) but not in node. </h3>
+        <h3>WebApi gives the settimeout(), setInterval() etc. </h3>
+     <h3>When webapi/node are called they are put in the task queue and then they go inside the call stack and executes..</h3>
+     <h3>Here ; we also have the fetch() in which it has promise which simply puts them into a high priority queue and then executed in the call stack .</h3>
+    
+    </div>
+
+
+
+</body>
+
+<script>
+
+    
+</script>
+
+
+
+</html>
