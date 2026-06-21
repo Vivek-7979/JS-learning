@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Beautiful Images</h2>
+
+<div> 
+    <ul id="images">
+        <li><img style="width: 150px;" id="photoshop" alt="photoshop" src="https://images.pexels.com/photos/33854467/pexels-photo-33854467.jpeg"></li>
+        <li> <img style="width: 150px;" id="beach" src="https://images.pexels.com/photos/7151015/pexels-photo-7151015.jpeg" alt="beach"></li>
+        <li><img style="width: 150px;" id="garden" src="https://images.pexels.com/photos/24491291/pexels-photo-24491291.jpeg" alt="garden"></li>
+        <li><img style="width: 150px;" id="waterfall" src="https://images.pexels.com/photos/20582098/pexels-photo-20582098.jpeg" alt="waterfall"></li>
+      
+    </ul>
+
+   
+ <a  href="https://www.google.com/" id="google" style="color: aliceblue; margin-top: 300px;">Google</a> 
+  <!-- error a reha c pehla bcz oh ul di range vic ake oh code chl hi nhi c reha  -->
+
+</div>
+<!-- Note : In js ; the onclick() approach works but it is not scalable . So , we don't use this in pure js -->
+
+</body>
+
+<script>   // All js is written inside this tag 
+// In js ; most of the events runs sequentially { but there are some exceptions }
+
+/* 1.] 
+  document.querySelector('#beach').onclick = function () {
+    alert('beach image is clicked')
+  }
+
+     This approach works but we don't use it . As , it is the onclick() approach
+     As It is less features . So , we should use eventlisteners
+
+2.] attachEvent ( old approaches not used today)
+3.] jQuery - on ( old styles not used today)
+
+      */
+
+      //   NOW LET'S COME ON TO THE BEST APPROACH (addEventListner) {select element , jo event hona (click,double,click etc) us pr eventlistner lake , function vich kaam ds dena kya karna}
+      //   addEventListner('jo bhi event hona (like-click)' , function(){ sara kaam jo hona , false (default hundi vse teh)})
+// All Events in browser => There are total 125 events in browser
+//                                                                 like : click , dblclick , mouseover , mouseup , mousedown etc
+//                                                                         keydown , keyup , submit , input , change  
+//                                                                         touchstart , scroll, drag , play , pause
+//                                                                         cut , copy , paste etc .
+
+
+
+// // It just tells about all the a to z events in the browser 
+//       document.querySelector('#beach').addEventListener('click' , function (e){
+//         //alert('beach is clicked again') ; 
+//         console.log(e);                      // The e passed in function is a object - that contains many methods/values { Like :- type , timestamp , preventdefault ,target , currenttaarget , srcElement , clientX , clientY , screenX , screenY etc .} 
+//       })
+
+
+document.getElementById('images').addEventListener('click', function(e){
+console.log('clicked inside the ul');
+},true ) 
+
+// true            = capturing (upr jan ale event nu farna baare ale the thale ) ; clicked inside ul than clicked beach 
+// false (default) = bubbling (thale ala event bare de upar chal jana) ; first beach then images clicked 
+
+document.getElementById('beach').addEventListener('click', function(e){
+console.log('clicked beach');
+e.stopPropagation(); // 3.] it will stop the further propagation ( mtlb hor upar agge kisi kol nhi jana) ; works in bubbling(false)
+}, true)
+// as beach is also inside the ul so both the events will be activated . therefore : two things happens + 1.] bubbling(false) , 2.] capturing(true)  3.] stopPropagation (bubbling prevent karda)
+
+
+
+
+document.querySelector('#google').addEventListener('click' , function (e) {
+e.preventDefault();        // jinda apa click krke usually link pr chal jana ; but je apa prevent default kardeyie taah ohne oh usual kaam nhi karna . [ jadki click teh hona hi ga teh oh jana bhi chaida]
+e.stopPropagation();
+console.log('google clicked') ;
+
+}, false)
+
+
+
+/*   If we click on the images that i will removed from the webpage */
+
+document.querySelector('#images').addEventListener('click', function(e){
+ console.log( e.target.tagName);  // there are many methods in the 'e' - object that is passed in the function
+
+ if ( e.target.tagName === 'IMG'){
+let removeImg = e.target.parentNode;        // here we are targeting the parentnode of the IMG  i.e.  <li> </li>    => the whole list item including the bulltens
+removeImg.remove();                         // the remove method siimply removed the element from the dom
+ }
+})
+
+
+
+
+
+
+
+
+
+
+
+//       const getAllBrowserEvents = () => {
+//   const events = [];
+//   for (const property in window) {
+//     if (property.startsWith('on')) {
+//       events.push(property.slice(2)); // Removes the 'on' prefix
+//     }
+//   }
+//   return events;
+// };
+// console.log(getAllBrowserEvents());
+
+
+
+
+
+
+
+</script>
+
+
+</html>
