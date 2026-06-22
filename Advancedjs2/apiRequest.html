@@ -1,0 +1,74 @@
+<!-- An API request is when your JavaScript code sends a message to a server asking for data or to perform an action.
+
+In JavaScript, this is usually done using:
+
+fetch() (modern, built-in)
+XMLHttpRequest (older)
+Axios or other libraries
+
+
+Term                 	Meaning
+API	            : Rules for communication between programs
+API Request     :	Asking the server for data or action
+Request Format	 :  URL, Method, Headers, Body
+Response Format  :	JSON (most common), XML, text, binary
+ -->
+
+
+ <!-- THIS XMLHTTP REQUEST IS VERY LESS COMMONLY USED NOW DUE TO HAVING OF FETCH() . BUT ; OLD APIS WERE CALLED BY THIS ONLY -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple XMLHttpRequest Example</title>
+</head>
+<body>
+    <h2>XMLHttpRequest Demo</h2>
+    <button onclick="loadData()">Load Data</button>
+    <div id="output" style="margin-top: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+
+    <script>
+        function loadData() {
+            const xhr = new XMLHttpRequest();
+
+            // Configure GET request to fetch a text file
+            xhr.open("GET", "data.txt", true);
+
+            // Event handler for successful response
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    document.getElementById("output").innerText = xhr.responseText;
+                } else {
+                    document.getElementById("output").innerText = 
+                        "Error: " + xhr.status + " " + xhr.statusText;
+                }
+            };
+
+            // Event handler for network errors
+            xhr.onerror = function () {
+                document.getElementById("output").innerText = "Request failed.";
+            };
+
+            // Send the request
+            xhr.send();
+        }
+
+
+// How It Works : 
+
+// Create an XMLHttpRequest object.
+// Open a connection with xhr.open(method, url, async).
+// Send the request with xhr.send().
+// Handle the response in xhr.onload (success) and xhr.onerror (network failure).
+// Parse JSON safely inside a try...catch block.
+
+// ✅ This example will fetch a random joke from the Chuck Norris API and display it when you click the button.
+
+
+
+
+    </script>
+</body>
+</html>
+
