@@ -16,10 +16,19 @@
 
 // Syntax of the setTimeout ( handler(means f(x) without name) , time )       ;  time is in milisecond { 1second = 1000 milisecond }
 
-setTimeout(function(){                                  
+const headingChanged = setTimeout(function(){    // It is stored inside a variable now 
+    document.querySelector('h1').innerHTML = 'Heading is changed !' ;      // heading inside the webpage is changed                           
     console.log('this is printed after 5 seconds')    // it does the work for one time only after the specific interval of time 
 }, 5000 )
 
+// Using the settimeout is ok ! But if i want to stop this method . we have clearInterval that should run on an event
+
+
+// Event that was going to happen is now stopped as we clicked on the stop button
+document.querySelector('#stop').addEventListener('click' , function(){
+    clearInterval(headingChanged);
+    console.log('the heading change event that was going to occur is now stopped by clicking on stop button')
+})
 
 </script>
 </html>

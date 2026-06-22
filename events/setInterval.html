@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval Project</title>
+</head>
+<body>
+    
+    <h1> Start should generate a random bg color every second . And Stop should stop that whole process .</h1>
+     <button id='start'> Start </button>
+    <button id='stop'> Stop </button>
+   
+</body>
+
+<script>
+    
+ // setInterval()  neh oh kaam bar-bar ohne iinterval baad kari jana { na ki settimout vangu sirf ik vaar}
+ // clearInterval() = eh setInterval de bar-bar ho rehi execution nu rokne vaste ga
+
+const startBtn = document.querySelector('#start');
+const stopBtn = document.querySelector('#stop');
+const body = document.querySelector('body');
+
+
+const randomColor = function (){
+    const hex = '0123456789ABCDEF' // 16 values makes the hex and one hex code = a unique color
+    let color = '#';
+
+    for ( i =0 ; i < 6; i++){
+        color += hex[ parseInt(Math.random() * 16)];   //  pehla 1-16 tk random position chk honi koi bhi hex vicho ; then 2nd position chk honi random 16 vicho , jado tk 6 positions ni hundi...
+    }
+
+    return color ; //  it will return a random hex code of color (# 6 values that are random from the 16 values in hex at every postion in 6 values of hex code  i.e. color )
+}
+console.log(randomColor()); // jo bhi f(x) random color generate kar reha 
+
+
+
+
+let IntervalId ; //  a global variable acceseed isndie the any function and outside it 
+
+
+
+
+ startBtn.addEventListener('click', function(){
+
+    if(!IntervalId){   // if intervalId hai hi nhi kuch tah jana is ch means null hai je { is naal chae bar-bar start pr click krdo kuch ni hona }
+  IntervalId =   setInterval(function(){                         // global variable start doing task
+  document.body.style.backgroundColor = randomColor() }, 1000 ,  // randomcolor method is called which gives us the random hex code and the bg color is changing based on tha code 
+// We can also pass parameters here 
+ )
+ }})
+
+
+
+  stopBtn.addEventListener('click', function (){
+ clearInterval(IntervalId);                                    // global variable task stopped
+ IntervalId = null ; // for the cleaner code { jado eh use ho gya teh null kardo }  
+ console.log('the work is stopeed'); 
+} )
+
+
+</script>
+</html>
