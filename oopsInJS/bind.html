@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> REACT </title>
+</head>
+<body>
+    <h1> This is the history of React </h1>
+    <h2>That , in early days how react used to work and what the concept of 'bind'</h2>
+    <p> As , under the hood everything was made  up on JS . So , the concepts of js is very important to learn the react features / how it basically worked .</p>
+
+    <h2>The bind is not that much used now in modern code era . But , eariler it was used ..</h2>
+
+
+<p>In JavaScript, bind() is a method that creates a new function with a specific value of this. It is commonly used to ensure that a function always uses the same this value, which is particularly useful when a function is called as a callbac</p>
+
+</body>
+
+<script>
+    const person = { name: "John" };
+function greet(person) {
+console.log(`Hello, ${person.name}!`);
+}
+function greetWithThis(person) {
+return greet.bind(person).call();
+}
+greetWithThis(person); // Outputs: Hello, John!
+
+</script>
+
+</html>
