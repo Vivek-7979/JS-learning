@@ -1,6 +1,7 @@
 // this is a very advanced topic . like :- SD2(Senior developer level - 2) to SD3 level question 
 
 // Question :- Is that as we know the value of pi in math library in js is 3.143.. .   Can we change it ??
+// Answer :- So , the simple and clear answer is NO ....          { by any means we cannot change the value of PI in math libraray in js / by any advanced method . bcz -  it is not writiable , enumerbale and configurable}
 
 
 
@@ -20,7 +21,7 @@ console.log(descipter);    // Output : writiable = false , enumerable(loop lagan
 //         But , we can also set the description of the objects that are defined by us ...
 
 
-// Example : Where the property of the object ( like - writable(change krna/overwrite) , enumerable(loop lagna / iterate) , configurable ) is manipulated .
+// Example : Where the property of the object ( like - writable(change krna/overwrite) , enumerable(loop lagna / iterate) , configurable(delete or rerdefine it ) ) is manipulated .
 
 const user = {                      // created a object
     username : 'vivek kumar',
