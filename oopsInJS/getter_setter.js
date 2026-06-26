@@ -52,3 +52,20 @@ const users = {
 }
 
 console.log(users.email);
+
+/*             +++++++++++++++++++++++++++++++++   SUMMARY ++++++++++++++++++++++++++++++++++++++++++++
+
+Summary :1.] U can set or get the value/property . But , the setter and getter tells that whether it should make the change happen or not 
+         2.] Setter / getter is like the secuirty guard of the bank locker . You can go inside the locker { But the guard will they that - whom i will allow , what to show ,whether to reject }
+
+         3.]  When we say that we can't directly access the value : 1.] MAtlab hoke tuci getter or setter vicho hi jana (direct pass,email pr ni chal jana tuc)
+                                                                    2.] Every read goes through getter . And every write goes through setter .
+
+
+         FINALLY  :  A.]  get and set value apa property di fer bhi kar skde bs gl ihni kr a ki .. oh jehra bhi get ya set kaam hona oh getter and setter false(x) vicho hoke jana .
+                          Set teh apa fer bhi kar skde value . But , sanu setter f(x) vicho hoke jake set krni peni ( Like - password set karna apa koi                                                       
+                                                                                                               (        Apa condition lagaie setter vich ki je oh 8 character da hoya tah hi set hona
+                                                                                                               (        Hun koi banda aya ohne bs 4 chr pa dite oh set ni hona . { hun bnde ne try teh kiti c set krne di but setter ne hon ni dita }
+
+                    B.]  Get apa fer bhi kar skde value ( setter and getter da mtlb eh nhi ki hon hi nhi dena kuch) . Isda da mtlb eh hai ki ihna vicho hoke jana jo jana . Fer setter , getter ch define hona kya hona chaida ya nhi.
+                         like : Apa get karni koi value ( hun apa kr teh skde ) but through get f(x) . Hun sade pr a apa ohnu value ki deni {encrypt krke , change krke show krni ya karni hi nhi ( mtlb limited access kr dena - apne upr hai ..)}                     */                                                                                            
