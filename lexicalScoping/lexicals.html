@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scoping and Closure </title>
+</head>
+<body>
+    <h1>
+         Lexical scoping : It means that a variable cannot be accesed outside the scope of the function .
+          But , it can be accessed insisde the function's function ( because they share same memory )
+    </h1>
+    <h2>
+        Matlab je teh function dde andar function ga .
+         taah teh andar ala function access kar sakda bahar ale function de variable nu .
+          But , je apa oh function toh bahar access kariye usda variable taah oh nhi hona || 
+    </h2><hr>
+
+    <h1>
+        Closure : 2. Closure in JavaScript <br>
+Definition: <br>
+A closure is a function that remembers and can access its lexical scope even when it is executed outside of that scope. <br>
+
+Why it happens:                              <br>
+When a function is returned from another function, it still retains a reference to the variables from the scope in which it was created.
+
+Example: In script 
+    </h1>
+</body>
+<script>
+    // Example of lexical scoping
+
+function outerFunction(){   // function declared
+    const name = 'vivek'     // variable inside the f(x)
+
+    function innerFunction(){
+        console.log('Inner f(x) is accessing outer f(x) variable :' , name); // inner function accessing the outer f(x) variable .But , this is inside the f(x) . If the function is at same level of other function they both cannot access each other { and the outer f(x) can also not acess the inner f(x)'s variable }
+    }
+    innerFunction() // calling innerf(x)
+}
+
+outerFunction() // executing the f(x) that is having inner f(x) that is accessing its variable and using it 
+
+console.log('this will not print as it is out of function',username);  // We cannot acces the usernae that is insidde the f(x) . Outside it ||
+
+
+// Example of closure 
+
+function makeCounter() {
+    let count = 0; // Private variable
+
+    return function () {
+        count++;  // count accesed by inner f(x)
+        return count;
+    };
+}
+
+const counter1 = makeCounter();
+console.log(counter1()); // 1
+console.log(counter1()); // 2     { here inner f(x) remeber the lexical scope variable count . Even , the outer f(x) is executed}
+
+const counter2 = makeCounter();
+console.log(counter2()); // 1
+
+// NOTE :   Closure = A feature that allows a function to remember variables from its lexical scope even after the outer function has finished.
+
+/*   
+     Here:
+
+           1.] makeCounter() returns an inner function.
+           2.] That inner function remembers the count variable from its lexical scope, even after makeCounter() has finished executing.
+           3.] This is a closure.                                                                 */
+
+
+
+
+</script>
+
+</html>
