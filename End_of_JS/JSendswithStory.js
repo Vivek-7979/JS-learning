@@ -3,6 +3,9 @@
 /* 
 
                                          " THE CORE JS ENDS HERE ...."
+
+
+ { I have done one mistake in all files that - of placing the sript tag after the body tag ends . But , it should be before the </body> tag ends . As the js will execute after all the elements in DOM are loaded }
    
 :- kichne nu taah jihna marji kichi jao is js nu . But , oh jehre topics hounga oh 
    kisi sub-topic de bhi sub parts hona .. Exceptions and rare case { eh teh vse bhi documentation parh ke a hi jana - ihna teh kabil ho hi gye ve }
