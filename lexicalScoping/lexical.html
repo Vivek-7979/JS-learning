@@ -57,7 +57,7 @@ function makeCounter() {
 
 const counter1 = makeCounter();
 console.log(counter1()); // 1
-console.log(counter1()); // 2     { here }
+console.log(counter1()); // 2     { here inner f(x) remeber the lexical scope variable count . Even , the outer f(x) is executed}
 
 const counter2 = makeCounter();
 console.log(counter2()); // 1
